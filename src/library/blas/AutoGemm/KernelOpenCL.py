@@ -30,7 +30,7 @@ def makeOpenCLKernelString(kernel):
   prec = kernel.getName()[0].lower()
   if prec == "d" or prec == "z":
     kStr += endLine
-    kStr += "#pragma OPENCL EXTENSION cl_khr_fp64 : enable" + endLine
+    kStr += "_Pragma(\\\"OPENCL EXTENSION cl_khr_fp64 : enable\\\")\\n\"\n\""
 
   ####################################
   # kernel parameters
